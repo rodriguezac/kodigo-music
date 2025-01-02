@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from "react"; 
 import { assets } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
 import LoginForm from "./LoginForm";
@@ -15,7 +15,6 @@ const Header = () => {
   };
 
   return (
-    
     <header className="fixed top-0 left-0 w-full bg-black text-white flex items-center justify-between px-4 sm:px-8 py-3 shadow-lg z-50">
       {/* Logo */}
       <div className="flex items-center">
@@ -49,7 +48,10 @@ const Header = () => {
 
         {/* Home and Search Icons for Small Screens */}
         <div className="flex sm:hidden space-x-4">
-          <button className="bg-[#1F1F1F] p-2 rounded-full">
+          <button
+            onClick={() => navigate("/")}
+            className="bg-[#1F1F1F] p-2 rounded-full"
+          >
             <img src={assets.home_icon} alt="Home" className="w-6 h-6" />
           </button>
           <button className="bg-[#1F1F1F] p-2 rounded-full">
